@@ -5,10 +5,11 @@ from flask import Flask, request, render_template, abort, g
 from dotenv import load_dotenv
 
 # Middlewares e segurança já existentes no projeto
-from middleware.logging_safe import logging_safe
-from middleware.headers import apply_security_headers
-from middleware.bot_filter import limiter
-from middleware.cloaking import decide_variant
+from backend.middleware.logging_safe import logging_safe
+from backend.middleware.headers import apply_security_headers
+from backend.middleware.bot_filter import limiter
+from backend.middleware.cloaking import decide_variant
+
 
 # CSRF para formulários
 from flask_wtf import CSRFProtect
