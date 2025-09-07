@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- CSS adicional -->
+  <link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="/como-ajudar">Como ajudar</a></li>
+          <li><a href="/descubra">Descubra</a></li>
+          <li><a href="/como-funciona">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <!-- Cabeçalho da página -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Política de Privacidade</h1>
+        <p class="intro-text">
+          A transparência é um dos nossos valores fundamentais. Nesta página você encontrará informações
+          sobre como tratamos seus dados pessoais.
+        </p>
+      </div>
+    </section>
+
+    <!-- Texto da política -->
+    <section class="policy-section container">
+      <h2>1. Coleta de Informações</h2>
+      <p>
+        Coletamos informações pessoais que você nos fornece diretamente ao criar uma conta,
+        realizar uma doação ou interagir com nossa plataforma.
+      </p>
+
+      <h2>2. Uso de Informações</h2>
+      <p>
+        Os dados coletados são utilizados para processar doações, garantir a segurança das transações,
+        enviar atualizações e melhorar continuamente nossos serviços.
+      </p>
+
+      <h2>3. Compartilhamento de Dados</h2>
+      <p>
+        Não vendemos nem compartilhamos suas informações pessoais com terceiros, exceto quando necessário
+        para cumprir obrigações legais ou para processar pagamentos.
+      </p>
+
+      <h2>4. Armazenamento e Segurança</h2>
+      <p>
+        Utilizamos medidas técnicas e organizacionais para proteger seus dados contra acesso não autorizado,
+        alteração ou destruição.
+      </p>
+
+      <h2>5. Seus Direitos</h2>
+      <p>
+        Você pode solicitar acesso, correção ou exclusão de suas informações pessoais a qualquer momento.
+        Para isso, entre em contato através de nossos canais oficiais.
+      </p>
+
+      <h2>6. Alterações desta Política</h2>
+      <p>
+        Podemos atualizar esta política periodicamente. Publicaremos a versão mais recente em nosso site
+        e indicaremos a data da última atualização.
+      </p>
+
+      <p><em>Última atualização: Setembro de 2025</em></p>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="/quem-somos">Quem somos</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/politica-de-privacidade" class="active">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="/financiamento-coletivo">Financiamento Coletivo</a></li>
+            
+            <li><a href="/relatorio-de-transparencia">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+<script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}" defer></script>
+</body>
+</html>

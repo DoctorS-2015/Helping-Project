@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Ajudar | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal (mantém header, footer e elementos globais) -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- CSS adicional para páginas institucionais -->
+  <link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="/como-ajudar">Como ajudar</a></li>
+          <li><a href="/descubra">Descubra</a></li>
+          <li><a href="/como-funciona">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <section class="hero-section">
+      <div class="container">
+        <h1>Como Ajudar</h1>
+        <p class="intro-text">
+          Existem muitas formas de apoiar nossa causa. Cada gesto faz diferença e nos aproxima de um futuro mais solidário.
+        </p>
+      </div>
+    </section>
+
+    <section class="help-options container">
+      <!-- Cards explicando formas de ajudar -->
+      <div class="help-card">
+        <h2>💙 Doações</h2>
+        <p>Contribua com qualquer valor e ajude a manter nossas ações ativas. Sua doação transforma vidas.</p>
+      </div>
+
+      <div class="help-card">
+        <h2>🙌 Voluntariado</h2>
+        <p>Ofereça seu tempo e conhecimento em atividades de apoio, eventos e comunicação.</p>
+      </div>
+
+      <div class="help-card">
+        <h2>📢 Compartilhe</h2>
+        <p>Divulgue nossas campanhas em suas redes sociais e alcance mais pessoas com nossa mensagem.</p>
+      </div>
+
+      <div class="help-card">
+        <h2>🐾 Adoção</h2>
+        <p>Considere adotar um animal resgatado. Você dá um lar e recebe amor incondicional.</p>
+      </div>
+    </section>
+
+    <section class="highlight-section">
+      <div class="container">
+        <h2>Juntos somos mais fortes</h2>
+        <p>
+          Qualquer forma de ajuda contribui para a construção de um ambiente solidário. Seja através de uma doação,
+          voluntariado, compartilhamento ou adoção, você é parte fundamental dessa transformação.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="/quem-somos">Quem somos</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="/financiamento-coletivo">Financiamento Coletivo</a></li>
+            <li><a href="/relatorio-de-transparencia">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+<script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}" defer></script>
+</body>
+</html>

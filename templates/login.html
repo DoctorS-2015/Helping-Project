@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- CSS adicional -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('como_ajudar') }}">Como ajudar</a></li>
+          <li><a href="{{ url_for('descubra') }}">Descubra</a></li>
+          <li><a href="{{ url_for('como_funciona') }}">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <section class="hero-section">
+      <div class="container">
+        <h1>Login</h1>
+        <p class="intro-text">Acesse sua conta para acompanhar campanhas e apoiar iniciativas.</p>
+      </div>
+    </section>
+
+    <!-- Formulário de login -->
+    <section class="login-section">
+      <form id="loginForm">
+        <h2>Acesse sua conta</h2>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="exemplo@email.com" required>
+        
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite sua senha" required>
+        
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="{{ url_for('quem_somos') }}">Quem somos</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('politica_de_privacidade') }}">Política de privacidade</a></li>
+            <li><a href="{{ url_for('termos_de_uso') }}">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="{{ url_for('financiamento_coletivo') }}">Financiamento Coletivo</a></li>
+            <li><a href="{{ url_for('relatorio_de_transparencia') }}">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Script de validação simples -->
+  <script nonce="{{ csp_nonce }}">
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // evita envio real
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Validação simples: email deve conter '@' e terminar com '.com'
+      const emailValido = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email);
+      const senhaValida = password.length > 4;
+
+      if (!emailValido) {
+        alert("Por favor, insira um e-mail válido (ex: usuario@dominio.com).");
+        return;
+      }
+
+      if (!senhaValida) {
+        alert("A senha deve ter mais de 4 caracteres.");
+        return;
+      }
+
+      // Se tudo certo, redireciona para a home
+      alert("Login realizado com sucesso! Redirecionando...");
+      window.location.href = "/";
+    });
+  </script>
+  <script src="{{ url_for('static', filename='js/security.js') }}" defer></script>
+</body>
+</html>

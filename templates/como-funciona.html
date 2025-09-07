@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Funciona | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- CSS adicional (padrão para páginas institucionais) -->
+  <link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="/como-ajudar">Como ajudar</a></li>
+          <li><a href="/descubra">Descubra</a></li>
+          <li><a href="/como-funciona" class="active">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <!-- Introdução -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Como Funciona</h1>
+        <p class="intro-text">
+          A Helping conecta pessoas dispostas a ajudar com campanhas que precisam de apoio.  
+          Veja como é simples participar:
+        </p>
+      </div>
+    </section>
+
+
+
+    <!-- Encerramento -->
+    <section class="highlight-section">
+      <div class="container">
+        <h2>Simples, transparente e transformador</h2>
+        <p>
+          Cada contribuição gera impacto real. Com transparência e responsabilidade, garantimos que sua ajuda chegue a quem mais precisa.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="/quem-somos">Quem somos</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="/financiamento-coletivo">Financiamento Coletivo</a></li>
+            <li><a href="/relatorio-de-transparencia">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+<script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}" defer ></script>
+</body>
+</html>

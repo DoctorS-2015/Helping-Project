@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubra | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal (estrutura global) -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- CSS adicional (estilos padronizados das páginas institucionais) -->
+  <link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="/como-ajudar">Como ajudar</a></li>
+          <li><a href="/descubra">Descubra</a></li>
+          <li><a href="/como-funciona">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <!-- Seção introdutória -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Descubra</h1>
+        <p class="intro-text">
+          Explore campanhas, causas e iniciativas que estão transformando vidas. Aqui você pode encontrar novos projetos para apoiar e se engajar.
+        </p>
+      </div>
+    </section>
+
+    <!-- Grid de campanhas/categorias -->
+    <section class="grid-section container">
+      <!-- Card 1 -->
+      <div class="grid-card">
+        <img src="{{ url_for('static', filename='img/gridanim.png') }}" alt="Animais" class="grid-img">
+        <h2>Proteção Animal</h2>
+        <p>Ajude a garantir cuidados, abrigo e adoção responsável para animais abandonados.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="grid-card">
+        <img src="{{ url_for('static', filename='img/grideduc.png') }}" alt="Educação" class="grid-img">
+        <h2>Educação</h2>
+        <p>Contribua para levar conhecimento e oportunidades a crianças e jovens.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="grid-card">
+        <img src="{{ url_for('static', filename='img/gridhealth.png') }}" alt="Saúde" class="grid-img">
+        <h2>Saúde</h2>
+        <p>Doe para apoiar tratamentos médicos e oferecer qualidade de vida a quem mais precisa.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="grid-card">
+        <img src="{{ url_for('static', filename='img/gridenv.png') }}" alt="Meio Ambiente" class="grid-img">
+        <h2>Meio Ambiente</h2>
+        <p>Participe de projetos que preservam a natureza e promovem sustentabilidade.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="/quem-somos">Quem somos</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="/financiamento-coletivo">Financiamento Coletivo</a></li>
+            
+            <li><a href="/relatorio-de-transparencia">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+<script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}" defer></script>
+</body>
+</html>

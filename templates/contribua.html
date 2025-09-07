@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Um Lar, Uma Chance: Ajude a Resgatar e Cuidar de Vidas Preciosas | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- CSS específico da página -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contribua.css') }}">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('como_ajudar') }}">Como ajudar</a></li>
+          <li><a href="{{ url_for('descubra') }}">Descubra</a></li>
+          <li><a href="{{ url_for('como_funciona') }}">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+            <button class="create-campaign">Login</button>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="container">
+      <div class="contribution-form">
+        <h2>Ajude a Resgatar e Cuidar de Vidas Preciosas</h2>
+        <p class="campaign-id">ID 5703879</p>
+
+        <!-- Formulário de contribuição -->
+        <form id="contributionForm" novalidate>
+          <!-- CSRF Token (apenas 1 por form) -->
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+          <!-- Telefone -->
+          <div class="form-group">
+            <label for="phone">Telefone (WhatsApp)</label>
+            <input type="tel" id="phone" name="phone" inputmode="tel" placeholder="(00) 00000 0000" />
+          </div>
+
+          <!-- E-mail -->
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Insira o seu melhor e-mail" />
+          </div>
+
+          <!-- CPF -->
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" />
+          </div>
+
+          <!-- Nome completo -->
+          <div class="form-group">
+            <label for="name">Nome completo</label>
+            <input type="text" id="name" name="name" placeholder="Insira seu nome de registro" />
+          </div>
+
+          <!-- Valor da contribuição -->
+          <div class="form-group">
+            <label for="amount">Valor da contribuição</label>
+            <div class="amount-input">
+              <span>R$</span>
+              <input type="text" id="amount" name="amount" inputmode="decimal" placeholder="0,00" />
+            </div>
+          </div>
+
+          <!-- Método de pagamento -->
+          <div class="form-group">
+            <label>Forma de pagamento</label>
+            <div class="payment-options">
+              <button type="button" class="payment-option active">PIX</button>
+            </div>
+          </div>
+
+          <!-- Turbinar doação -->
+          <div class="donation-boost">
+            <h3>TURBINE SUA DOAÇÃO (opcional)</h3>
+            <div class="boost-single">
+              <input type="checkbox" id="boost-checkbox" />
+              <label for="boost-checkbox" class="boost-label">
+                <div class="boost-row">
+                  <div class="boost-left">
+                    <strong>Turbinar sua doação</strong>
+                    <div class="boost-details">
+                      <img src="{{ url_for('static', filename='img/logohelp.png') }}" alt="" class="boost-icon" />
+                      <div class="boost-desc">Destaque sua campanha, participe de promoções e apoie causas relacionadas.</div>
+                    </div>
+                  </div>
+                  <div class="boost-right">
+                    <div class="boost-items">
+                      <div class="boost-item">
+                        <span class="item-name">3 números da sorte</span>
+                        <span class="item-price">R$ 5,99</span>
+                      </div>
+                      <div class="boost-item">
+                        <span class="item-name">3 Corações</span>
+                        <span class="item-price">R$ 3,99</span>
+                      </div>
+                      <div class="boost-item">
+                        <span class="item-name">Saúde para todos</span>
+                        <span class="item-price">R$ 2,00</span>
+                      </div>
+                    </div>
+                    <div class="boost-total">
+                      Total: <span class="boost-price" data-price="11.98">R$ 11,98</span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Resumo -->
+          <div class="summary">
+            <p>Contribuição: <span id="contribution-value">R$ 0,00</span></p>
+            <p>Total: <span id="total-value">R$ 0,00</span></p>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="form-group newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter">Quero receber atualizações desta campanha e de outras iniciativas.</label>
+          </div>
+
+          <p class="privacy-notice">Respeitamos sua privacidade, enviando apenas e-mails e WhatsApp importantes.</p>
+
+          <!-- Botão de submissão -->
+          <button type="submit" class="submit-btn">Contribuir</button>
+
+          <!-- Aviso de segurança -->
+          <p>
+            <img src="{{ url_for('static', filename='img/seguro.png') }}" alt="Seguro" class="icon-security">
+            <strong> Garantimos uma experiência segura para todos os nossos doadores.</strong>
+          </p>
+          <p class="terms">
+            Ao clicar no botão acima você declara que é maior de 18 anos, leu e está de acordo com os 
+            <a href="{{ url_for('termos_de_uso') }}">Termos, Taxas e Prazos</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/contribua.js') }}"></script>
+  <script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}"></script>
+  
+  <!-- Modal de Erro -->
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <button id="modal-close">Ok</button>
+    </div>
+  </div>
+</body>
+</html>

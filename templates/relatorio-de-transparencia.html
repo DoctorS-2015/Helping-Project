@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Transparência | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- CSS adicional -->
+  <link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="/como-ajudar">Como ajudar</a></li>
+          <li><a href="/descubra">Descubra</a></li>
+          <li><a href="/como-funciona">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <!-- Introdução -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Relatório de Transparência</h1>
+        <p class="intro-text">
+          Nosso compromisso é com a confiança.  
+          Aqui apresentamos números e informações que demonstram a seriedade da Helping.
+        </p>
+      </div>
+    </section>
+
+    <!-- Indicadores principais -->
+    <section class="stats-section container">
+      <div class="stat-card">
+        <h2>💰 R$ 12.500.000+</h2>
+        <p>Arrecadados em campanhas ativas</p>
+      </div>
+      <div class="stat-card">
+        <h2>📦 2.800+</h2>
+        <p>Campanhas financiadas com sucesso</p>
+      </div>
+      <div class="stat-card">
+        <h2>👥 150.000+</h2>
+        <p>Doadores ativos na plataforma</p>
+      </div>
+    </section>
+
+    <!-- Seção de transparência -->
+    <section class="policy-section container">
+      <h2>Prestação de Contas</h2>
+      <p>
+        A Helping destina <strong>95%</strong> de cada doação diretamente às campanhas.  
+        Os <strong>5%</strong> restantes são utilizados para manter a operação, investir em segurança digital e melhorar nossos serviços.
+      </p>
+
+      <h2>Auditoria</h2>
+      <p>
+        Realizamos auditorias independentes anualmente para garantir total clareza na utilização dos recursos arrecadados.
+      </p>
+
+      <h2>Exemplo de Distribuição</h2>
+      <ul>
+        <li>📌 45% para saúde e bem-estar</li>
+        <li>📌 30% para educação</li>
+        <li>📌 15% para causas ambientais</li>
+        <li>📌 10% para projetos diversos</li>
+      </ul>
+    </section>
+
+    <!-- Encerramento -->
+    <section class="highlight-section">
+      <div class="container">
+        <h2>Transparência é nossa base</h2>
+        <p>
+          Trabalhamos para que cada contribuição seja destinada da forma mais justa e eficaz.  
+          Confiança se conquista com responsabilidade e clareza.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="/quem-somos">Quem somos</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="/financiamento-coletivo">Financiamento Coletivo</a></li>
+            
+            <li><a href="/relatorio-de-transparencia" class="active">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+<script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso | Helping</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- CSS adicional -->
+  <link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+  
+  <!-- Cabeçalho padrão -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+        </a>
+        <ul class="nav-links">
+          <li><a href="/como-ajudar">Como ajudar</a></li>
+          <li><a href="/descubra">Descubra</a></li>
+          <li><a href="/como-funciona">Como funciona</a></li>
+        </ul>
+        <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="page-content">
+    <!-- Cabeçalho da página -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Termos de Uso</h1>
+        <p class="intro-text">
+          Estes Termos regulam o uso da plataforma Helping. Ao acessar e utilizar nossos serviços,
+          você concorda com as regras descritas abaixo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Texto dos termos -->
+    <section class="policy-section container">
+      <h2>1. Aceitação dos Termos</h2>
+      <p>Ao utilizar a Helping, você concorda com estes Termos de Uso e com nossa Política de Privacidade.</p>
+
+      <h2>2. Uso da Plataforma</h2>
+      <p>A plataforma deve ser utilizada de forma ética, respeitando as leis aplicáveis e os direitos de terceiros.</p>
+
+      <h2>3. Responsabilidade dos Usuários</h2>
+      <p>
+        Os criadores de campanhas são responsáveis pelas informações fornecidas e pela veracidade dos dados.
+        A Helping não se responsabiliza por conteúdos gerados por terceiros.
+      </p>
+
+      <h2>4. Doações</h2>
+      <p>
+        As doações realizadas através da plataforma são voluntárias e destinadas exclusivamente às campanhas escolhidas.
+        Em caso de descumprimento de diretrizes, a Helping poderá intervir conforme suas políticas de segurança.
+      </p>
+
+      <h2>5. Limitações de Responsabilidade</h2>
+      <p>
+        A Helping não garante resultados específicos para campanhas, atuando como intermediária entre doadores
+        e beneficiários.
+      </p>
+
+      <h2>6. Alterações nos Termos</h2>
+      <p>
+        Estes Termos podem ser atualizados periodicamente. A versão vigente estará sempre disponível nesta página.
+      </p>
+
+      <p><em>Última atualização: Setembro de 2025</em></p>
+    </section>
+  </main>
+
+  <!-- Rodapé padrão -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="/quem-somos">Quem somos</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso" class="active">Termos de uso</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Dúvidas frequentes</h4>
+          <ul>
+            <li><a href="/financiamento-coletivo">Financiamento Coletivo</a></li>
+            
+            <li><a href="/relatorio-de-transparencia">Relatório de transparência</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Fale conosco</h4>
+          <p>De Segunda à Sexta</p>
+          <p>Das 9:30 às 17:00</p>
+        </div>
+        <div class="column">
+          <h4>Baixe nosso App</h4>
+          <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+          <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+        </div>
+      </div>
+      <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+    </div>
+  </footer>
+<script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}" defer></script>
+</body>
+</html>

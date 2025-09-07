@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta  charset="UTF-8">
+  <title>Pagamento Pix</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/pagamento-pix.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping"></a>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('como_ajudar') }}">Como ajudar</a></li>
+                    <li><a href="{{ url_for('descubra') }}">Descubra</a></li>
+                    <li><a href="{{ url_for('como_funciona') }}">Como funciona</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  <main class="container payment-container">
+  <h1 class="page-title" style="margin-right: 15px;">Pagamento via Pix</h1>
+
+  <!-- trilha de passos: estado atual = Pagamento -->
+  <ol class="steps" aria-label="Progresso do pagamento">
+    <li class="done">Contribuição</li>
+    <li class="current" aria-current="step">Pagamento</li>
+    <li>Confirmação</li>
+  </ol>
+
+  <section class="pix-card" aria-labelledby="sec-pix">
+    <h2 id="sec-pix" class="sr-only">Dados para pagar com Pix</h2>
+
+    <div class="pix-left">
+      <div class="qr-frame" aria-live="polite" aria-busy="true">
+        <div id="qrcodePix" role="img" aria-label="QR Code para pagamento Pix"></div>
+      </div>
+
+      <p class="amount-line">
+        <span class="label">Valor:</span>
+        <strong class="amount">R$ <span id="valorPix">—</span></strong>
+      </p>
+
+      <div class="support-info">
+        <span class="badge-secure" aria-label="Pagamento seguro">🔒 Pagamento seguro</span>
+        <details class="howto">
+          <summary>Como pagar com Pix</summary>
+          <ol>
+            <li>Abra o app do seu banco.</li>
+            <li>Escolha <em>Pagar com Pix</em> e a opção <em>QR Code</em>.</li>
+            <li>Escaneie o código ou use <em>copia e cola</em>.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+
+    <div class="pix-right">
+      <label for="pixCode" class="field-label">Pix copia e cola</label>
+      <div class="copy-group">
+        <input
+          type="text"
+          id="pixCode"
+          readonly
+          inputmode="text"
+          aria-describedby="helper-copia"
+          title="Código Pix no formato copia e cola" />
+        <button type="button" class="btn btn-primary" onclick="copiarCodigo()" aria-live="polite">
+          📋 Copiar
+        </button>
+      </div>
+      <p id="helper-copia" class="helper-text">
+        Use este código no seu app bancário, na opção <strong>Pix &gt; Copia e cola</strong>.
+      </p>
+
+      <div class="tip">
+        Observação: ao efetuar o pagamento, você será redirecionado para a próxima página automaticamente.
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer>
+    <!-- mesmo footer -->
+  </footer>
+
+  <script nonce="{{ csp_nonce }}" src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/pagamento-pix.js') }}"></script>
+<!--  <script src="{{ url_for('static', filename='js/security.js') }}"></script>-->
+</body>
+</html>

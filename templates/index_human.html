@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Lar, Uma Chance: Ajude a Resgatar e Cuidar de Vidas Preciosas | Helping</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logohelp.png') }}">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo"><img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping"></a>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('como_ajudar') }}">Como ajudar</a></li>
+                    <li><a href="{{ url_for('descubra') }}">Descubra</a></li>
+                    <li><a href="{{ url_for('como_funciona') }}">Como funciona</a></li>
+                </ul>
+                <div class="nav-actions">
+                    
+                    <a href="{{ url_for('login') }}" style="text-decoration: none; border: none;">
+                    <button class="create-campaign" >Login</button></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="campaign-header">
+            <div class="container">
+                <p class="category">AJUDA / ADOÇÃO</p>
+                <h1>Um Lar, Uma Chance: Ajude a Resgatar e Cuidar de Vidas Preciosas</h1>
+                <p class="campaign-id">ID: 5703879</p>
+                <p class="location">📍 FORTALEZA / CEARÁ</p>
+            </div>
+        </section>
+
+        <section class="campaign-details">
+            <div class="container">
+                <div class="main-content">
+                    <div class="share-section">
+                    <div class="campaign-image">
+                        <img src="{{ url_for('static', filename='img/principal.png') }}" alt="Imagem da campanha">
+                    </div>
+                    <div class="image-overlay">
+                                                        
+                            <button class="protected-donation" id="protectedDonationBtn">
+                                <img src="{{ url_for('static', filename='img/doacs.png') }}" alt="Doação Protegida" class="icon-shield">
+                            </button>
+                        </div>
+                    
+                    
+                        <h3>COMPARTILHE ESTA INICIATIVA</h3>
+                        <div class="share-link-wrapper">
+                            <div class="share-link">
+                            <input type="text" value="https://www.helping.com.br/adocao/ajude-os-animais" readonly>
+                            </div>
+                            <a href="#" class="social-link"><img src="{{ url_for('static', filename='img/sociais.png') }}" alt="Logo Sociais"></a>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Navegação por Abas -->
+                    <div class="tabs-container">
+                        <nav class="tabs-nav">
+                            <button class="tab-btn active" data-tab="sobre">Sobre</button>
+                            <button class="tab-btn" data-tab="atualizacoes">Atualizações</button>
+                            <button class="tab-btn" data-tab="quem-ajudou">Quem ajudou</button>
+                            <button class="tab-btn" data-tab="selos">Selos recebidos</button>
+                            
+                        </nav>
+
+                        <!-- Conteúdo das Abas -->
+                        <div class="tab-content active" id="sobre">
+                            <div class="pix-info">
+                                <p>Você pode ajudar via Pix usando a chave: <strong>ajuda@helping.com.br</strong> <button class="copy-pix-key">Copiar</button></p>
+                            </div>
+                            <div class="campaign-date">
+                                <p><strong>Campanha criada em:</strong> 29/08/2025</p>
+                            </div>
+                            <div class="campaign-additional-image">
+                                <img src="{{ url_for('static', filename='img/gridanim.png') }}" alt="Imagem adicional da campanha">
+                                
+                                
+                            </div>
+                            <div class="campaign-description">
+                                <h3>Sobre</h3>
+                                <p>Olhe para esses olhos. Cada um deles conta uma história de espera, de esperança, e de uma necessidade urgente de amor. Em abrigos superlotados e ruas frias, cachorros e gatinhos como estes aguardam um milagre – um lar seguro, carinho e uma chance de uma vida digna.</p>
+                                <p>Nossa missão é simples, mas poderosa: resgatar, cuidar e encontrar famílias amorosas para esses seres indefesos. Muitos deles chegam a nós com fome, doentes e traumatizados, precisando de atenção veterinária imediata, nutrição adequada e, acima de tudo, a sensação de segurança que nunca tiveram.</p>
+                                <p>Cada doação, não importa o tamanho, faz uma diferença real. É um prato de comida, um remédio que salva uma vida, um teto sobre a cabeça e um passo mais perto de um final feliz. Juntos, podemos transformar essas vidas tristes em histórias de alegria e amor.</p>
+                                <p>Seja a esperança que esses olhos procuram. Doe hoje e ajude-nos a dar a eles a segunda chance que tanto merecem.</p>
+                                <p><b>Com a sua ajuda, podemos:</b><br>- <i>Fornecer Cuidados Veterinários Essenciais:</i> Vacinas, vermifugação, castração/esterilização e tratamento para doenças e lesões.
+                                    <br><i>- Garantir Alimentação e Abrigo:</i> Comida nutritiva, cobertores quentes e um espaço seguro enquanto aguardam a adoção.
+                                    <br><i>- Promover Adotões Responsáveis:</i> Organizar eventos, divulgar os animais e fazer o acompanhamento necessário para encontrar o lar perfeito.
+                                    <br><i>- Expandir Nossa Capacidade:</i> Quanto mais recursos tivermos, mais animais poderemos ajudar.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="atualizacoes">
+                            <p>Maria Antonieta Das Graças há 12 horas: <br>
+"Quero agradecer a cada pessoa que está ajudando de alguma forma nessa caminhada: quem doou, quem está acompanhando a história, quem compartilhou, quem mandou uma mensagem de apoio...
+
+Tudo isso tem um impacto enorme gera ainda mais força pra continuar!
+
+Se você já ajudou e quer continuar apoiando sem gastar nada, compartilhar a campanha com seus amigos e nas redes sociais é uma baita ajuda!
+
+Quanto mais gente conhecer a história, maiores as chances de bater a meta!"</p>
+                        </div>
+
+                        <div class="tab-content" id="quem-ajudou">
+                            <img src="{{ url_for('static', filename='img/quemajuda.png') }}" alt="Quem Ajudou">
+                        </div>
+
+                        <div class="tab-content" id="selos">
+                            <p>Agora as campanhas mais engajadas ganham selos especiais!
+Esta campanha ainda não desbloqueou selos, mas cada nova doação, compartilhamento ou coração pode ajudar a conquistá-los!</p>
+                        </div>
+
+                        <div class="tab-content" id="premiada">
+                            <p>Cada ação no Helping pode garantir números da sorte para concorrer todos os meses a R$ 15 MIL nos sorteios do Helping - Ajuda Premiada</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-section">
+                        <h2>Tudo o que você precisa saber sobre o Helping</h2>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <h3>Como ajudar os animais?</h3>
+                                <span class="faq-arrow">&#9660;</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Você pode ajudar fazendo uma doação através do botão "Quero Ajudar" ou utilizando a chave PIX: ajuda@helping.com.br. Qualquer valor faz a diferença!</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <h3>Quando a campanha foi criada?</h3>
+                                <span class="faq-arrow">&#9660;</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Esta campanha foi criada em 29 de agosto de 2025.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <h3>Qual a meta da campanha Ajude a resgatar e cuidar de vidas preciosas?</h3>
+                                <span class="faq-arrow">&#9660;</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A meta desta campanha é arrecadar R$ 33.000,00 para ajudar na manutenção e adoção de animais abandonados.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <h3>Como posso ajudar via chave PIX?</h3>
+                                <span class="faq-arrow">&#9660;</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Use a chave PIX: ajuda@helping.com.br para fazer sua doação diretamente. É rápido, seguro e o valor chega imediatamente.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <h3>Quanto a campanha já arrecadou?</h3>
+                                <span class="faq-arrow">&#9660;</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Até o momento, a campanha já arrecadou R$ 7.584,23 de uma meta de R$ 33.000,00, com o apoio de 77 pessoas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pix-section">
+                        <p>Você também pode <strong>contribuir via Pix usando a chave:</strong> ajuda@helping.com.br</p>
+                        <button class="copy-pix-key">Copiar</button>
+                    </div>
+
+                    
+
+                    <p class="legal-notice">AVISO LEGAL: O texto e as imagens incluídos nessa página são meramenta ilustrativas, Este projeto é apenas para fins de estudo e portfólio e tem como objetivo demonstrar a construção de uma aplicação web segura e responsiva.</p>
+                    <p class="legal-notice">A plataforma simula um ambiente de financiamento coletivo (crowdfunding), com foco em segurança, usabilidade e transparência, permitindo ao usuário contribuir em campanhas de forma simples e intuitiva.</p>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="donation-summary">
+                        <p>Arrecadado</p>
+                        <p class="amount">R$ 7.584,23</p>
+                        <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        </div>
+                        <p>Meta</p>
+                        <p class="goal">R$ 33.000,00</p>
+                        <p>Apoiadores</p>
+                        <p class="supporters">77</p>
+                        <br>
+                        <a href="{{ url_for('contribua') }}" class="help-button">Quero Ajudar</a>
+
+                    </div>
+                    <div class="creator-info">
+                        <img src="{{ url_for('static', filename='img/principal.png') }}" alt="Foto do criador">
+                        <p><strong>Abrigo para Animais Abandonados</strong><br>Ativo(a) no Helping desde agosto/2023<br>1 campanha criada</p>
+                        <div class="creator-description">
+                            <p class="short-text">Olhe para esses olhos. Cada um deles conta uma história de espera, de esperança, e de uma necessidade urgente de amor. Em abrigos superlotados e ruas frias, cachorros e gatinhos como estes aguardam um milagre....</p>
+                            <p class="full-text" style="display: none;">Olhe para esses olhos. Cada um deles conta uma história de espera, de esperança, e de uma necessidade urgente de amor. Em abrigos superlotados e ruas frias, cachorros e gatinhos como estes aguardam um milagre – um lar seguro, carinho e uma chance de uma vida digna.</p>
+                            <button class="read-more-btn" onclick="toggleReadMore()">Leia mais</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='img/logomarcahelp.png') }}" alt="Logo Helping">
+            </div>
+            <div class="footer-links">
+                <div class="column">
+                    <h4>Links rápidos</h4>
+                    <ul>
+                        <li><a href="{{ url_for('quem_somos') }}">Quem somos</a></li>
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('politica_de_privacidade') }}">Política de privacidade</a></li>
+                        <li><a href="{{ url_for('termos_de_uso') }}">Termos de uso</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Dúvidas frequentes</h4>
+                    <ul>
+                        <li><a href="{{ url_for('financiamento_coletivo') }}">Financiamento Coletivo (Crowdfunding)</a></li>
+                        <li><a href="{{ url_for('relatorio_de_transparencia') }}">Relatório de transparência</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Fale conosco</h4>
+                    
+                    <p>De Segunda à Sexta</p>
+                    <p>Das 9:30 às 17:00</p>
+                    
+                </div>
+                <div class="column">
+                    <h4>Baixe nosso App</h4>
+                    <img src="{{ url_for('static', filename='img/iconeplay.png') }}" alt="Google Play" class="footer-icon">
+                    <img src="{{ url_for('static', filename='img/apple.png') }}" alt="App Store" class="footer-icon">
+                </div>
+            </div>
+            <p class="copyright">HELPING © 2025 - Todos direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Doação Protegida -->
+    <div id="protectedDonationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <div class="security-badge">
+                    <img src="{{ url_for('static', filename='img/shield-icon.png') }}" alt="Selo de Segurança" class="security-icon">
+                    <span class="security-text">SELO DE<br>SEGURANÇA</span>
+                </div>
+                <h2>Doação segura garantida!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Esta campanha faz parte da base de campanhas do Helping e está protegida pelos nossos processos de segurança.</p>
+                
+                <div class="security-feature">
+                    <img src="{{ url_for('static', filename='img/shield-icon.png') }}" alt="Segurança" class="feature-icon">
+                    <strong>Nossa segurança é transparência</strong>
+                </div>
+                
+                <p>No Helping, segurança e transparência são prioridades. Por isso, protegemos seus dados com tecnologia de ponta e protocolos rigorosos de segurança.</p>
+                
+                <p>Também assumimos a responsabilidade por reembolsos em campanhas que não seguirem nossas diretrizes.</p>
+                
+                <p>Estamos aqui para fazer da solidariedade algo maior, dentro de um ambiente seguro e eficaz.</p>
+                
+                <p>Juntos, podemos transformar vidas 💙</p>
+                
+                <button class="modal-ok-btn">OK</button>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script nonce="{{ csp_nonce }}" src="{{ url_for('static', filename='js/security.js') }}"></script>
+</body>
+</html>
+
