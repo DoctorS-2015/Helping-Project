@@ -1,7 +1,7 @@
 import os, logging
 from logging.handlers import RotatingFileHandler
 from flask import request
-from utils.crypto import hash_ip
+from backend.utils.crypto import hash_ip
 
 logger = logging.getLogger("access")
 logger.setLevel(logging.INFO)
